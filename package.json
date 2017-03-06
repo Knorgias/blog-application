@@ -1,0 +1,29 @@
+{
+  "name": "blog-application",
+  "version": "1.0.0",
+  "description": "Creating a blogging application that allows users to do the following: - register an account - login - logout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knorgias/blog-application.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Kostas Norgias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Knorgias/blog-application/issues"
+  },
+  "homepage": "https://github.com/Knorgias/blog-application#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-beta11"
+  }
+}
