@@ -1,35 +1,32 @@
 const express = require('express')
 const app = express()
+const session = require('express-session')
 
+//My Session
+app.use( session({
+	secret: 'choco cookie',
+	resave: false,
+	saveUninitialized: false,
+	cookie: { secure: false,
+	maxAge: 1000 * 60 * 30 }
+}))
+
+//My custom routes
+const users = require( __dirname + '/routes/users')
+const posts = require(__dirname + '/routes/posts')
+
+//Using bodyparser for req,res easy access
 const bodyparser = require( 'body-parser' )
 
-app.set( 'views', __dirname + '/views' )
-app.set( 'view engine', 'pug' )
+//My custom modules inclusions
+const db = require( __dirname + '/modules/database' )
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
+app.use(express.static(__dirname + '/public'))
 
-app.use( express.static( __dirname + '/static' ) )
-app.use( bodyparser.urlencoded( { extended: true } ) )
+app.use('/', users);
+app.use('/posts', posts)
 
-//Render the index page
-app.get( '/', ( req, res ) => {
-
-	// Display the index page
-	res.render( 'index', {
-		//user: 'Kostas',
-		//today: 'Monday',
-	} )
-} )
-
-
-app.post( '/api', ( req, res ) => {
-	console.log( req.body )
-	res.send( 'Very well done ' + req.body.name )
-} )
-
-app.get( '/api', ( req, res ) => {
-	console.log( req.query )
-	res.send( 'This was a get request ' + (req.query.name ? req.query.name : ', but it was empty..') + '. Thank you. Come again.' )
-} )
-
-app.listen( 2810, f => {
-	console.log( 'App running on port 2810' )
-} )
+app.listen(8000, f => {
+	console.log('Server running on port 8000')
+})

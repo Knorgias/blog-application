@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title Blog App
+		link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
+		link(rel="stylesheet", href="css/style.css")
+	body
+		header(class="mdl-layout__header")
+			div(class="mdl-layout__header-row")
+				span(class="mdl-layout-title") Awesome Blog
+				div(class="mdl-layout-spacer")
+						nav(class="mdl-navigation mdl-layout--large-screen-only")
+							a(class="mdl-navigation__link" href="./profile") Home
+							a(class="mdl-navigation__link" href="posts/posts") Posts
+							form(action='/logout', method='POST')
+								button(class="mdl-navigation__link" type="submit") Logout
+							form(action="/search", method="post", class="searchForm")
+								input(class="mdl-textfield__input" placeholder="Search", name="search")
+								//- input(type="submit", value="Search", placeholder="search", class="searchButton") 
+      
+	block content

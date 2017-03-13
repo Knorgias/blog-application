@@ -1,0 +1,140 @@
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#index.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#register-link {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    float:right;
+    margin: 20px 40px;
+}
+
+#login-link {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    float:right;
+    margin: 20px 40px;
+}
+
+li.mdl-list__item{
+    text-align: center;
+    font-size: 25px;
+    color: #3FA7D6;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    border-bottom: thin solid grey; 
+}
+
+.mdl-button{
+    width: 25% ;
+    margin-top: 20px;
+    left: 36%;
+    background-color: #59CD90;
+    color: white;
+
+
+}
+
+.mdl-button:hover{
+    background-color: #59CD90;
+}
+
+.mdl-textfield__input{
+    background-color: white;
+    border-radius: 3px;
+    color: black;
+}
+
+.myHeader{
+    text-align: center;
+    font-size: 50px;
+    color: #FAC05E;
+}
+
+.searchForm{
+    width: 80%;
+}
+
+.searchButton{
+    width: 60px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: white;
+    border-style: none;
+    margin-left: 5px;
+    color: grey;
+    align-content: right;
+}
+
+.searchUsers{
+    margin-left: 50px;
+    border-bottom: 1px;
+    font-size: 30px;
+}
+.deleteButton{
+    width: 20px;
+    border-radius: 20px; 
+    background-color: #EE6352;
+    float: right;
+    color: white;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.profileP{
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 25px;
+    color: gray;
+}
+
+.mdl-textfield__input{
+    margin: 20px;
+}
+
+.comments {
+    width: 200px;
+    color: grey;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+
+.nameHeader{
+    margin-left: 50px;
+    font-size: 65px;
+
+}

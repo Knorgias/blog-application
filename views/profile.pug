@@ -1,0 +1,21 @@
+extends ./application.pug
+block content
+			h1 Welcome #{user.name}
+			form(action= "/status" , method="post")
+				input(class="mdl-textfield__input" type="name", name="post", placeholder="How do you feel today")
+				input(class="mdl-button mdl-js-button mdl-button--raised" type="submit", value="Post")
+			ul(class="demo-list-item mdl-list")
+				if user.posts.length > 0
+					each post in user.posts
+						li(class="mdl-list__item")= post.content
+							form(action='/posts/delete/' + post.id, method="post")
+								//- input(type='hidden', name='_method', value='DELETE')
+								button(class="mdl-button mdl-js-button mdl-button--raised deleteButton" type="submit" data-post=post.id) X
+						if post.comments.length > 0
+							each comment in post.comments
+								li(class="comments")= comment.content	
+						form(action='/posts/comment', method="post")
+							input(name="postId", value=post.id , type="hidden")
+							input(class="mdl-textfield__input comments", name="comment" , type="text", placeholder="leave your comment")
+				else
+					p(class="profileP") You have no posts

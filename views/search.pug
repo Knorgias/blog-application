@@ -1,0 +1,10 @@
+extends ./application.pug
+block content
+	ul(class="demo-list-item mdl-list")
+		if users.length > 0
+			each user in users
+				li(class="mdl-list__item searchUsers")= user.name
+					form(action='/' + user.id, method="get")
+						button(class="mdl-button mdl-js-button mdl-button--raised deleteButton" type="submit" data-post=user.id) Go to user
+			else
+				p Sorry could not find any users with #{query}

@@ -1,0 +1,14 @@
+extends ./application.pug
+block content
+			h1(class="nameHeader")  #{user.name}
+			p(class="profileP")  My Feed
+			ul(class="demo-list-item mdl-list")
+				if posts.length > 0
+					each post in posts
+						li(class="mdl-list__item")= post.content
+						form(action='/posts/comment', method="post")
+							input(name="postId", value=post.id hidden)
+							input(class="mdl-textfield__input comments", name="comment" , type="text", placeholder="leave your comment")
+								
+				else
+					p(class="profileP") The user has not posted yet

@@ -5,14 +5,12 @@ html
 		link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
 		link(rel="stylesheet", href="css/style.css")
 		body
-			h1(class="myHeader") Bienvenue!
+			h1(class="myHeader") Welcome to our Blog 
 			//- button(class="mdl-button mdl-js-button mdl-button--raised") Login
-			a(class="mdl-navigation__link" href="./login") Login
-			h1(class="myHeader") Register Below
-			form(action= "/register" , method="post", class="registerMenu")
+			h1(class="myHeader") Login Please
+			form(action= "/login" , method="post", class="registerMenu")
 				input(type="name", name="username", placeholder="username", class="mdl-textfield__input", class="mdl-textfield__input")
-				input(type="string", name="email", placeholder="email", class="mdl-textfield__input")
 				input(type="password", name="password", placeholder="password", class="mdl-textfield__input")
-				input(type="submit", value="Sign Up", class="mdl-button mdl-js-button mdl-button--raised")
+				input(type="submit", value="Login", class="mdl-button mdl-js-button mdl-button--raised")
 			script(src="jquery/jquery.js")
 			script(src="jquery/custom.js")
